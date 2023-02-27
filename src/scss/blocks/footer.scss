@@ -1,0 +1,117 @@
+@use "../mixins/responsive.scss" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  @include responsive(laptop) {
+    padding-left: 150px;
+    padding-right: 150px;
+
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    height: 200px;
+  }
+}
+
+.footer__menu--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+
+  margin-bottom: 3rem;
+
+  @include responsive(laptop) {
+    flex-direction: row;
+    gap: 2rem;
+
+    margin-bottom: 0;
+  }
+}
+
+.footer__menu--link {
+  @include responsive(laptop) {
+    position: relative;
+  }
+}
+
+.footer__menu--link:hover::after {
+  @include responsive(laptop) {
+    content: "";
+
+    position: absolute;
+    bottom: -0.7rem;
+    right: calc(50% - 13px);
+
+    height: 2px;
+    width: 26px;
+    background-color: var(--white);
+  }
+}
+
+.logo--footer {
+  margin-bottom: 2rem;
+
+  @include responsive(laptop) {
+    margin-bottom: 0;
+    height: 1.3rem;
+  }
+}
+
+.footer__rrss-list {
+  display: flex;
+  gap: 1rem;
+
+  @include responsive(laptop) {
+    align-self: flex-end;
+  }
+}
+
+.footer__rrss-icon {
+  height: 1.2rem;
+
+  @include responsive(laptop) {
+    height: 1.3rem;
+  }
+}
+
+.footer__rrss-link {
+  @include responsive(laptop) {
+    position: relative;
+  }
+}
+
+.footer__rrss-link:hover::after {
+  @include responsive(laptop) {
+    content: "";
+
+    position: absolute;
+    bottom: -0.7rem;
+    right: 0;
+
+    height: 2px;
+    width: 100%;
+    background-color: var(--white);
+  }
+}
+
+.footer__copy {
+  color: var(--dark-gray);
+  font-family: var(--titles-font);
+  font-size: 0.9rem;
+
+  @include responsive(laptop) {
+    margin: 0;
+    align-self: flex-end;
+  }
+}

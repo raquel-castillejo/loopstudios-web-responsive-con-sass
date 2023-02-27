@@ -1,0 +1,25 @@
+:root {
+  /* fonts */
+  --body-font: 'Josefin Sans', sans-serif;
+  --titles-font: 'Alata', sans-serif;
+
+  /* --------------------------------------------- */
+
+  /* colors */
+  /* primary colors */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+
+  /* --------------------------------------------- */
+
+  /* colors applied */
+  /* txt colors */
+  --txt-color: hsl(0, 0%, 0%);
+
+  /* bg colors */
+  --bg-color: hsl(0, 0%, 100%);
+
+}
+/* Variables SASS */

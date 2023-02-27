@@ -1,0 +1,45 @@
+@use "../mixins/responsive.scss" as *;
+
+.title {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 1.1;
+
+    @include responsive(laptop){
+        font-size: 4rem;
+    }
+}  
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    line-height: 1.1;
+
+    text-align: center; 
+
+    @include responsive(laptop){
+        font-size: 2.7rem;
+    }
+}
+
+.txt {
+    text-align: center;
+}
+
+.subtitle--leader-in-vr,
+.txt--leader-in-vr {
+    @include responsive(laptop){
+        text-align: left;
+        max-width: 30rem;
+    }
+}
+
+.our-creations__link {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 1.1;
+
+    @include responsive(laptop){
+        font-size: 2rem;
+    }
+}

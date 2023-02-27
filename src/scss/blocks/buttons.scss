@@ -1,0 +1,18 @@
+@use "../mixins/responsive.scss" as *;
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    border: 1px solid var(--black);
+
+    text-transform: uppercase;
+    font-family: var(--titles-font);
+    letter-spacing: 3px;
+}
+
+.button:hover {
+    @include responsive(laptop){
+        color: var(--white);
+        background-color: var(--black);
+    }
+}

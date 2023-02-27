@@ -1,0 +1,219 @@
+@use '../mixins/responsive.scss' as *;
+
+.main {
+  padding: 20px;
+}
+
+.leader-in-vr {
+  margin-bottom: 100px;
+
+  @include responsive(laptop) {
+    padding-left: 150px;
+    padding-right: 150px;
+
+    position: relative;
+  }
+}
+
+.img--leader-in-vr {
+  margin-bottom: 50px;
+
+  @include responsive(laptop) {
+    max-width: 731px;
+  }
+}
+
+.leader-in-vr__texts {
+  @include responsive(laptop) {
+    background-color: var(--bg-color);
+
+    max-width: 731px;
+    padding-left: 70px;
+    padding-top: 50px;
+
+    position: absolute;
+    right: 150px;
+    bottom: 0;
+  }
+}
+
+.txt--leader-in-vr {
+  @include responsive(laptop) {
+    margin-bottom: 0;
+  }
+}
+
+.our-creations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 70px;
+
+  @include responsive(laptop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding-left: 150px;
+    padding-right: 150px;
+
+    justify-content: space-between;
+  }
+}
+
+.our-creations__list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+
+  @include responsive(laptop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    width: 100%;
+    order: 2;
+  }
+}
+
+.our-creations__list-item {
+  display: inline-block;
+  height: 120px;
+  width: 100%;
+
+  position: relative;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  @include responsive(laptop) {
+    height: 450px;
+    width: calc((100% - 6rem) / 4);
+  }
+}
+
+.our-creations__list-item:hover {
+  @include responsive(laptop) {
+    cursor: pointer;
+    color: var(--black);
+  }
+}
+
+.our-creations__list-item:hover::after {
+  @include responsive(laptop) {
+    content: '';
+
+    height: 100%;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0.5);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.our-creations__link {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+
+  max-width: 7rem;
+
+  @include responsive(laptop) {
+    bottom: 27px;
+    left: 30px;
+    max-width: 12rem;
+  }
+}
+
+.our-creations__list-item--deep-earth {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent),
+    url(/assets/images/mobile/image-deep-earth.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-deep-earth.jpg);
+  }
+}
+
+.our-creations__list-item--night-arcade {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.7), transparent),
+    url(/assets/images/mobile/image-night-arcade.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-night-arcade.jpg);
+  }
+}
+
+.our-creations__list-item--soccer-team {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.7), transparent),
+    url(/assets/images/mobile/image-soccer-team.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-soccer-team.jpg);
+  }
+}
+
+.our-creations__list-item--the-grid {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent),
+    url(/assets/images/mobile/image-grid.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-grid.jpg);
+  }
+}
+
+.our-creations__list-item--from-up {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent),
+    url(/assets/images/mobile/image-from-above.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-from-above.jpg);
+  }
+}
+
+.our-creations__list-item--pocket-borealis {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent),
+    url(/assets/images/mobile/image-pocket-borealis.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-pocket-borealis.jpg);
+  }
+}
+
+.our-creations__list-item--the-curiosity {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent),
+    url(/assets/images/mobile/image-curiosity.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-curiosity.jpg);
+  }
+}
+
+.our-creations__list-item--make-it-fisheye {
+  background: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent),
+    url(/assets/images/mobile/image-fisheye.jpg);
+  background-size: cover;
+
+  @include responsive(laptop) {
+    background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7), transparent),
+      url(/assets/images/desktop/image-fisheye.jpg);
+  }
+}
